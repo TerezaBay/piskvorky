@@ -19,14 +19,13 @@ html {
 .obsah, .uvodni_foto {
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-  
 }
 
 .obsah {
   background-color: #283e50;
   width: 360px;
   text-align: center;
-  margin: 60px auto 100px;
+  margin: 60px auto;
   box-shadow: 0px 0px 10px 0px rgba(100, 100, 100, 0.801);
 }
 
