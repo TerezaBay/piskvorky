@@ -44,11 +44,6 @@ html {
   margin: 0 12px 32px 12px;
 }
 
-.tlacitka {
-  display: flex;
-  flex-direction: column;
-}
-
 .tlacitka a {
   text-decoration: none;
   color: #ffffff;
