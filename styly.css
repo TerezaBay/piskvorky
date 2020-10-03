@@ -18,7 +18,6 @@ body {
   min-width: 100%;
   min-height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 .obsah,
@@ -27,7 +26,7 @@ body {
   border-top-left-radius: 8px;
 }
 
-.obsah {
+.obsah, .obsah_pravidla {
   background-color: #283e50;
   width: 360px;
   text-align: center;
@@ -90,6 +89,9 @@ body {
 }
 
 /* styly specifické pro stránku pravidla.html */
+.obsah_pravidla {
+  min-width: 280px;
+}
 
 .pravidla_vypis {
   text-align: left;
@@ -108,7 +110,7 @@ body {
 }
 
 figure {
-  margin: 0 20px 35px 20px;
+  margin: 0 20px 40px 20px;
 }
 
 figure img {
@@ -118,4 +120,25 @@ figure img {
 figcaption {
   font-style: italic;
   color: lightgrey;
+  padding-top: 5px;
+}
+
+@media screen and (min-width: 700px) {
+  .obsah_pravidla {
+    min-width: 650px;
+  }
+
+  figure {
+    margin: 0 0 40px 0;
+  }
+
+  .pravidla_obr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .pravidla_obr figure {
+    flex: 0 1 45%;
+  }
 }
