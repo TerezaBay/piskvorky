@@ -171,6 +171,7 @@ figcaption {
   display: flex;
   align-items: center;
 }
+
 .nastroje h2 {
   text-transform: uppercase;
 }
@@ -180,13 +181,11 @@ figcaption {
   height: 25px;
   border: 3px solid;
   border-radius: 50%;
-  display: inline-block;
   margin-left: 10px;
 }
 
 .tlacitka_hra {
   display: flex;
-  margin: initial;
 }
 
 .tlacitka_hra a {
@@ -205,15 +204,13 @@ figcaption {
 .hraci_plocha {
   display: flex;
   flex-wrap: wrap;
-  /* vyřešit ohraničení okolo */
+  box-shadow: 0px 0px 10px 0px rgba(100, 100, 100, 0.801);
 }
 .hraci_plocha button {
   flex: 1 1 8vmin;
   height: 8vmin;
   background-color: rgba(255, 255, 255, 0.300);
   border: 1px solid #283e50;
-  /* border-collapse: collapse; */
-  /* proč toto nefunguje? */
 }
 
 .hraci_plocha button:hover,
