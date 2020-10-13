@@ -56,6 +56,7 @@ h1 {
   line-height: 1.5;
 }
 
+/* stylování tlačítek společné pro všechny strany */
 .tlacitka {
   margin: 0;
   padding: 0;
@@ -77,7 +78,7 @@ h1 {
   border-bottom: 1px solid #283e50;
 }
 
-.tlacitko_hrat {
+.tlacitko_hrat, .tlacitko_restart {
   background-color: #0197f6;
 }
 
@@ -91,7 +92,9 @@ h1 {
 }
 
 .tlacitko_hrat a:hover,
-.tlacitko_hrat a:focus {
+.tlacitko_hrat a:focus,
+.tlacitko_restart a:hover, 
+.tlacitko_restart a:focus {
   background-color: #0090e9;
 }
 
@@ -152,35 +155,68 @@ figcaption {
 
 /* styly specifické pro stránku hra.html */
 .obsah_hra {
+  min-width: 20vmin;
   max-width: 80vmin;
+  margin-top: 0;
 }
 
 .nastroje {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
+.ukazatel_hrace {
+  display: flex;
+  align-items: center;
+}
 .nastroje h2 {
   text-transform: uppercase;
 }
 
+.kolecko {
+  width: 25px;
+  height: 25px;
+  border: 3px solid;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .tlacitka_hra {
   display: flex;
+  margin: initial;
+}
 
+.tlacitka_hra a {
+  border-radius: 6px;
+}
+
+.tlacitko_domu, .tlacitko_restart {
+  border-radius: 6px;
+  border-bottom: none;
+}
+
+.tlacitko_restart {
+  margin-left: 10px;
 }
 
 .hraci_plocha {
   display: flex;
   flex-wrap: wrap;
+  /* vyřešit ohraničení okolo */
 }
 .hraci_plocha button {
   flex: 1 1 8vmin;
   height: 8vmin;
-  background-color: ;
+  background-color: rgba(255, 255, 255, 0.300);
   border: 1px solid #283e50;
+  /* border-collapse: collapse; */
+  /* proč toto nefunguje? */
 }
 
 .hraci_plocha button:hover,
 .hraci_plocha button:focus {
-  background-color: ;
+  background-color: rgba(255, 255, 255, 0.500);
 }
