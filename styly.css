@@ -26,7 +26,8 @@ body {
   border-top-left-radius: 8px;
 }
 
-.obsah, .obsah_pravidla {
+.obsah,
+.obsah_pravidla {
   background-color: #283e50;
   width: 360px;
   text-align: center;
