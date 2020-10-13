@@ -26,13 +26,16 @@ body {
   border-top-left-radius: 8px;
 }
 
-.obsah,
-.obsah_pravidla {
+.obsah {
   background-color: #283e50;
   width: 360px;
+  box-shadow: 0px 0px 10px 0px rgba(100, 100, 100, 0.801);
+}
+
+.obsah,
+.obsah_pravidla, .obsah_hra {
   text-align: center;
   margin: 60px auto;
-  box-shadow: 0px 0px 10px 0px rgba(100, 100, 100, 0.801);
 }
 
 .uvodni_foto {
@@ -40,7 +43,7 @@ body {
   display: block;
 }
 
-.obsah h1 {
+h1 {
   font-family: 'Lobster', cursive;
   font-size: 3em;
   font-weight: 400;
@@ -68,7 +71,8 @@ body {
 }
 
 .tlacitko_pravidla,
-.tlacitko_uvod {
+.tlacitko_uvod,
+.tlacitko_domu {
   background-color: #1fcca4;
   border-bottom: 1px solid #283e50;
 }
@@ -80,7 +84,9 @@ body {
 .tlacitko_pravidla a:hover,
 .tlacitko_pravidla a:focus,
 .tlacitko_uvod a:hover,
-.tlacitko_uvod a:focus {
+.tlacitko_uvod a:focus, 
+.tlacitko_domu a:hover,
+.tlacitko_domu a:focus {
   background-color: #1cbb96;
 }
 
@@ -142,4 +148,39 @@ figcaption {
   .pravidla_obr figure {
     flex: 0 1 45%;
   }
+}
+
+/* styly specifické pro stránku hra.html */
+.obsah_hra {
+  max-width: 80vmin;
+}
+
+.nastroje {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nastroje h2 {
+  text-transform: uppercase;
+}
+
+.tlacitka_hra {
+  display: flex;
+
+}
+
+.hraci_plocha {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hraci_plocha button {
+  flex: 1 1 8vmin;
+  height: 8vmin;
+  background-color: ;
+  border: 1px solid #283e50;
+}
+
+.hraci_plocha button:hover,
+.hraci_plocha button:focus {
+  background-color: ;
 }
