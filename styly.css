@@ -158,13 +158,18 @@ figcaption {
   min-width: 20vmin;
   max-width: 80vmin;
   margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.obsah_hra h1 {
+  padding: 20px 0px 15px;
 }
 
 .nastroje {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .ukazatel_hrace {
