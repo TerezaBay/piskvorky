@@ -176,13 +176,14 @@ figcaption {
   text-transform: uppercase;
 }
 
-.kolecko {
+/* .kolecko {
   width: 25px;
   height: 25px;
   border: 3px solid;
   border-radius: 50%;
   margin-left: 10px;
-}
+} */
+/* smazáno pro přebytečnost */
 
 .tlacitka_hra {
   display: flex;
@@ -211,9 +212,30 @@ figcaption {
   height: 8vmin;
   background-color: rgba(255, 255, 255, 0.300);
   border: 1px solid #283e50;
+  position: relative;
 }
 
 .hraci_plocha button:hover,
 .hraci_plocha button:focus {
   background-color: rgba(255, 255, 255, 0.500);
+}
+
+/* styly specifické pro script.js */
+.hraci_plocha--circle {
+  background-image: url("podklady/circle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+
+.hraci_plocha--cross {
+  background-image: url("podklady/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+
+.ukazatel_hrace img {
+  filter: invert(100%);
+  margin-left: 10px;
 }
