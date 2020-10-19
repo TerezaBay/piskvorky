@@ -33,7 +33,8 @@ body {
 }
 
 .obsah,
-.obsah_pravidla, .obsah_hra {
+.obsah_pravidla,
+.obsah_hra {
   text-align: center;
   margin: 60px auto;
 }
@@ -78,14 +79,15 @@ h1 {
   border-bottom: 1px solid #283e50;
 }
 
-.tlacitko_hrat, .tlacitko_restart {
+.tlacitko_hrat,
+.tlacitko_restart {
   background-color: #0197f6;
 }
 
 .tlacitko_pravidla a:hover,
 .tlacitko_pravidla a:focus,
 .tlacitko_uvod a:hover,
-.tlacitko_uvod a:focus, 
+.tlacitko_uvod a:focus,
 .tlacitko_domu a:hover,
 .tlacitko_domu a:focus {
   background-color: #1cbb96;
@@ -93,7 +95,7 @@ h1 {
 
 .tlacitko_hrat a:hover,
 .tlacitko_hrat a:focus,
-.tlacitko_restart a:hover, 
+.tlacitko_restart a:hover,
 .tlacitko_restart a:focus {
   background-color: #0090e9;
 }
@@ -198,7 +200,8 @@ figcaption {
   border-radius: 6px;
 }
 
-.tlacitko_domu, .tlacitko_restart {
+.tlacitko_domu,
+.tlacitko_restart {
   border-radius: 6px;
   border-bottom: none;
 }
@@ -215,26 +218,26 @@ figcaption {
 .hraci_plocha button {
   flex: 1 1 8vmin;
   height: 8vmin;
-  background-color: rgba(255, 255, 255, 0.300);
+  background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid #283e50;
   position: relative;
 }
 
 .hraci_plocha button:hover,
 .hraci_plocha button:focus {
-  background-color: rgba(255, 255, 255, 0.500);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* styly specifické pro script.js */
 .hraci_plocha--circle {
-  background-image: url("podklady/circle.svg");
+  background-image: url('podklady/circle.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
 }
 
 .hraci_plocha--cross {
-  background-image: url("podklady/cross.svg");
+  background-image: url('podklady/cross.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
