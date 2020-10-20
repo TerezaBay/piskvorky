@@ -164,7 +164,7 @@ figcaption {
 }
 
 .obsah_hra h1 {
-  padding: 20px 0px 15px;
+  padding: 15px 0px 5px;
 }
 
 .nastroje {
@@ -215,6 +215,7 @@ figcaption {
   flex-wrap: wrap;
   box-shadow: 0px 0px 10px 0px rgba(100, 100, 100, 0.801);
 }
+
 .hraci_plocha button {
   flex: 1 1 8vmin;
   height: 8vmin;
@@ -235,6 +236,18 @@ figcaption {
   background-position: center;
   background-size: 60%;
 }
+
+/* button::before {
+  content:"";
+  background-image: url('podklady/circle.svg');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-size: 10%;
+  transition: background-size 5s;
+} */
+/* nepropojitelné s JS, smazáno */
 
 .hraci_plocha--cross {
   background-image: url('podklady/cross.svg');
