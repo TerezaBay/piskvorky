@@ -230,33 +230,40 @@ figcaption {
 }
 
 /* styly specifické pro script.js */
-.hraci_plocha--circle {
-  background-image: url('podklady/circle.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-}
-
-/* button::before {
-  content:"";
-  background-image: url('podklady/circle.svg');
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  background-size: 10%;
-  transition: background-size 5s;
-} */
-/* nepropojitelné s JS, smazáno */
-
-.hraci_plocha--cross {
-  background-image: url('podklady/cross.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-}
-
 .ukazatel_hrace img {
   filter: invert(100%);
   margin-left: 10px;
+}
+
+.hraci_plocha--circle::before {
+  content:"";
+  background-image: url('podklady/circle.svg');
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  animation-name: symbolScale;
+  animation-duration: 0.15s;
+}
+
+.hraci_plocha--cross::before {
+  content:"";
+  background-image: url('podklady/cross.svg');
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  animation-name: symbolScale;
+  animation-duration: 0.15s;
+}
+
+@keyframes symbolScale {
+  from {
+    transform: scale(0.1);
+}
+ to {
+    transform: scale(1);
+};
 }
