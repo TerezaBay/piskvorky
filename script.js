@@ -122,39 +122,61 @@ const isWinningMove = (button) => {
     symbolsInColumn += 1;
     i += 1;
   }
-  console.log("symboly ve sloupci " + symbolsInColumn)
 
   if (symbolsInColumn >= symbolsToWin) {
     return true;
   }
 
   // Koukni diagonála "pravá"
-  let symbolsInDiagonalRight = 1;
-  let r = origin.row; // to je číslo řady
-  let c = origin.column; // to je číslo sloupce
+  let symbolsInDiaRight = 1;
+  let r = origin.row;
+  let c = origin.column;
 
   // nahoru doprava
   while (r > 0 && c < boardSize - 1 && symbol === getSymbol(getField(r - 1, c + 1))) {
-    symbolsInDiagonalRight += 1;
+    symbolsInDiaRight += 1;
     r -= 1;
     c += 1;
   }
   
   // dolu doleva
+  r = origin.row;
+  c = origin.column;
   while (r < boardSize - 1 && c > 0 && symbol === getSymbol(getField(r + 1, c - 1))) {
-    symbolsInDiagonalRight += 1;
+    symbolsInDiaRight += 1;
     r += 1;
     c -= 1;
   }
-  console.log("symboly diagonálně " + symbolsInDiagonalRight)
+  console.log("symboly diagonálně P " + symbolsInDiaRight)
   
-  if (symbolsInDiagonalRight >= symbolsToWin) {
+  if (symbolsInDiaRight >= symbolsToWin) {
     return true;
   }
 
   // Koukni diagonála "levá"
-  // Koukni diagonálně nahoru doleva
-  // Koukni diagonálně dolů doprava
+  let symbolsInDiaLeft = 1;
+  // nahoru doleva
+  r = origin.row;
+  c = origin.column;
+  while (r > 0 && c < boardSize - 1 && symbol === getSymbol(getField(r - 1, c - 1))) {
+    symbolsInDiaLeft += 1;
+    r -= 1;
+    c -= 1;
+  }
+  
+  // dolů doprava
+  r = origin.row;
+  c = origin.column;
+    while (r < boardSize - 1 && c > 0 && symbol === getSymbol(getField(r + 1, c + 1))) {
+      symbolsInDiaLeft += 1;
+      r += 1;
+      c += 1;
+    }
+    console.log("symboly diagonálně L " + symbolsInDiaLeft)
+    
+    if (symbolsInDiaLeft >= symbolsToWin) {
+      return true;
+    }
 
   return false;
 };
