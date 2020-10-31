@@ -4,7 +4,7 @@ console.log('Funguju!');
 let hraje = 'circle';
 
 const buttonsElm = document.querySelectorAll('button');
-const hrajeSymbolElm = document.querySelector('#change_symbol');
+const hrajeSymbolElm = document.querySelector('#change_symbol img');
 
 // zobrazení symbolů
 buttonsElm.forEach((button) => {
@@ -12,12 +12,14 @@ buttonsElm.forEach((button) => {
     if (hraje === 'circle') {
       e.target.classList.add('hraci_plocha--circle');
       hraje = 'cross';
-      hrajeSymbolElm.innerHTML = `<img src="podklady/${hraje}.svg" alt="${hraje}"/>`;
+      hrajeSymbolElm.src = `podklady/${hraje}.svg`
+      hrajeSymbolElm.alt = "Křížek"
       e.target.disabled = true;
     } else {
       e.target.classList.add('hraci_plocha--cross');
       hraje = 'circle';
-      hrajeSymbolElm.innerHTML = `<img src="podklady/${hraje}.svg" alt="${hraje}"/>`;
+      hrajeSymbolElm.src = `podklady/${hraje}.svg`
+      hrajeSymbolElm.alt = "Kolečko"
       e.target.disabled = true;
     }
 
@@ -128,11 +130,13 @@ const isWinningMove = (button) => {
   }
 
   // Koukni diagonála "pravá"
+  let r;
+  let c;
   let symbolsInDiaRight = 1;
-  let r = origin.row;
-  let c = origin.column;
-
+  
   // nahoru doprava
+  r = origin.row;
+  c = origin.column;
   while (r > 0 && c < boardSize - 1 && symbol === getSymbol(getField(r - 1, c + 1))) {
     symbolsInDiaRight += 1;
     r -= 1;
@@ -155,6 +159,7 @@ const isWinningMove = (button) => {
 
   // Koukni diagonála "levá"
   let symbolsInDiaLeft = 1;
+
   // nahoru doleva
   r = origin.row;
   c = origin.column;
