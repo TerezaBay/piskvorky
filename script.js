@@ -131,20 +131,20 @@ const isWinningMove = (button) => {
   // Koukni diagonála "pravá"
   let symbolsInDiagonalRight = 1;
   let r = origin.row; // to je číslo řady
-  let c = origin.column // to je číslo sloupce
+  let c = origin.column; // to je číslo sloupce
 
   // nahoru doprava
   while (r > 0 && c < boardSize - 1 && symbol === getSymbol(getField(r - 1, c + 1))) {
     symbolsInDiagonalRight += 1;
-    r += 1;
-    c -= 1;
+    r -= 1;
+    c += 1;
   }
   
   // dolu doleva
   while (r < boardSize - 1 && c > 0 && symbol === getSymbol(getField(r + 1, c - 1))) {
     symbolsInDiagonalRight += 1;
-    r -= 1;
-    c += 1;
+    r += 1;
+    c -= 1;
   }
   console.log("symboly diagonálně " + symbolsInDiagonalRight)
   
