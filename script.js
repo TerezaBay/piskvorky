@@ -26,7 +26,7 @@ buttonsElm.forEach((button) => {
       const askAgain = 'Spustit novou hru?';
       if (confirm(`${winMessage} ${askAgain}`)) {
         location.reload();
-      } else null;
+      };
     };
 
     const alertWinner = () => {
