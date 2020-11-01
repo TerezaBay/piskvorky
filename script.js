@@ -14,18 +14,13 @@ buttonsElm.forEach((button) => {
       hraje = 'cross';
       hrajeSymbolElm.src = `podklady/${hraje}.svg`
       hrajeSymbolElm.alt = "Křížek"
-      e.target.disabled = true;
     } else {
       e.target.classList.add('hraci_plocha--cross');
       hraje = 'circle';
       hrajeSymbolElm.src = `podklady/${hraje}.svg`
       hrajeSymbolElm.alt = "Kolečko"
-      e.target.disabled = true;
     }
-
-    console.log('Get position', getPosition(e.target));
-    console.log('Get symbol', getSymbol(e.target));
-    console.log('Is winning move', isWinningMove(e.target));
+    e.target.disabled = true;
 
     // vyskakovací okno s výsledkem
     const confirmQ = (winMessage) => {
@@ -36,7 +31,7 @@ buttonsElm.forEach((button) => {
     };
 
     const alertWinner = () => {
-      if (isWinningMove(e.target) === true) {
+      if (isWinningMove(e.target)) {
         if (getSymbol(e.target) === 'circle') {
           let winMessage = `Vyhrálo kolečko!`;
           confirmQ(winMessage);
@@ -88,10 +83,10 @@ const isWinningMove = (button) => {
   const symbol = getSymbol(button);
 
   let i;
-  let symbolsInRow = 1; // Jednička pro právě vybrané políčko
+  let symbolsInRow = 1;
 
   // Koukni doleva
-  i = origin.column; // to je číslo sloupce
+  i = origin.column;
   while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
     symbolsInRow += 1;
     i -= 1;
@@ -111,7 +106,7 @@ const isWinningMove = (button) => {
   let symbolsInColumn = 1;
 
   // Koukni nahoru
-  i = origin.row; // to je číslo řady
+  i = origin.row;
   while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
     symbolsInColumn += 1;
     i -= 1;
@@ -151,7 +146,6 @@ const isWinningMove = (button) => {
     r += 1;
     c -= 1;
   }
-  console.log("symboly diagonálně P " + symbolsInDiaRight)
   
   if (symbolsInDiaRight >= symbolsToWin) {
     return true;
@@ -177,7 +171,6 @@ const isWinningMove = (button) => {
       r += 1;
       c += 1;
     }
-    console.log("symboly diagonálně L " + symbolsInDiaLeft)
     
     if (symbolsInDiaLeft >= symbolsToWin) {
       return true;
